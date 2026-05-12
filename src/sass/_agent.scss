@@ -1,0 +1,48 @@
+.agent-image {
+    width: 18rem;
+}
+
+.contact-form {
+    padding: 4rem 5rem;
+    border: 1px solid $gray-400;
+    @include media-breakpoint-down(md) {
+        padding: 3rem 2rem;
+    }
+}
+
+.captcha {
+    height: $input-height;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.agent {
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+    }
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 540px;
+    .form-control {
+        background: transparent;
+        border-color: $gray-700;
+    }
+}
+
+.agent-logo {
+    max-height: 4rem;
+    max-width: 10rem;
+    background: rgba($black, 0.6);
+    padding: 0.5rem;
+    &.square {
+        padding: 0;
+    }
+}
+
+table {
+    width: 100% !important
+}

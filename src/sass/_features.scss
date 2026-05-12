@@ -1,0 +1,67 @@
+.features-text {
+    max-height: 15rem;
+    overflow: hidden;
+    p {
+        margin-bottom: 1.5rem;
+    }
+    &.fullvisible {
+        max-height: auto;
+    }
+}
+
+.features-wrapper {
+    .features-collapse {
+        display: none;
+    }
+    .features-text {
+        max-height: 15rem;
+        transition: 0.2s max-height;
+        overflow: hidden;
+        p {
+            margin-bottom: 1.5rem;
+        }
+    }
+    &.fullvisible {
+        .features-text {
+            max-height: none;
+        }
+        .features-expand {
+            display: none;
+        }
+        .features-collapse {
+            display: inline-block;
+        }
+    }
+}
+
+.features-text-wrap {
+    word-break: break-word;
+}
+
+table {
+    width: 100% !important;
+    table-layout: fixed;
+}
+
+@media (max-width: 1024px) {
+    table {
+        word-break: initial;
+        table-layout: unset;
+    }
+}
+
+
+/* Portrait and Landscape for ipad */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    table {
+        word-break: break-word;
+        table-layout: fixed;
+    }
+}
+
+.features-text p,
+.features-text span,
+.features-text div {
+    text-indent: initial !important;
+}

@@ -1,0 +1,74 @@
+body,
+ :root {
+    width: 100%;
+    overflow-x: hidden;
+    min-width: 320px !important;
+}
+
+.navbar {
+    height: 4.4rem;
+}
+
+.page-cover {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-cover-stretch {
+    flex: 1;
+    height: 100%;
+}
+
+.header-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.section {
+    padding: 5rem 1rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.section-heading {
+    text-align: center;
+}
+
+.section-box {
+    padding: 5rem;
+    background: rgba($white, 0.5);
+    @include media-breakpoint-down(md) {
+        padding: 5rem 2rem;
+    }
+}
+
+.section-box.contact-form {
+    padding: 4rem 3rem;
+    background: rgba($white, 0.65);
+    @include media-breakpoint-down(md) {
+        padding: 4rem 2rem;
+    }
+}
+
+.minus {
+    margin-left: -10px;
+    margin-top: -5px;
+    color: inherit;
+    font-size: 20px;
+}
+
+.plus {
+    margin-top: -3px;
+    color: inherit;
+    font-size: 20px;
+    margin-right: -4px;
+}
+
+button,
+.button,
+.btn {
+    font-family: none !important;
+}

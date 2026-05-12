@@ -1,0 +1,56 @@
+.sidebar {
+  position: fixed;
+  right: 0;
+  top:0;
+  width: 20rem;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  background: rgba($dark, 0.7);
+  padding: 1rem 2rem;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  z-index: 9;
+  display: none;
+  &.visible {
+    display: block;
+  }
+
+}
+.sidebar .nav-link {
+  text-align: center;
+  color: $light;
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  &:after {
+    content: " ";
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $light;
+    transition: width 0.5s;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+.sidebar {
+  ul {
+    display: block;
+    margin: 0;
+    padding: 1rem;
+
+    li {
+      display: block;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}

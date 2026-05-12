@@ -1,0 +1,67 @@
+.serif {
+    font-family: $font-family-serif !important;
+}
+
+.sans {
+    font-family: $font-family-sans-serif !important;
+}
+
+$font_styles: ( gotham: #{'Gotham Book', sans-serif}, roboto: #{'Roboto', sans-serif}, opensans: #{'Open Sans', sans-serif}, ptsans: #{'PT Sans', sans-serif}) !default;
+$font_styles_header: ( gotham: #{'Gotham Book', sans-serif}, robotoslab: #{'Roboto Slab', serif}, playfair: #{'Playfair Display', serif}, lora: #{'Lora', serif}, slabo: #{'Slabo 27px', serif}) !default;
+$font_sizes: ( sm: 15px, md: 16px, lg: 17px) !default;
+@each $shorthand,
+$family in $font_styles {
+    body {
+        &.#{$shorthand} {
+            font-family: $family;
+            .sans {
+                font-family: $family !important;
+            }
+        }
+    }
+}
+
+@each $shorthand,
+$family in $font_styles_header {
+    body {
+        &.#{$shorthand} {
+            .serif,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-family: $family !important;
+            }
+        }
+    }
+}
+
+@each $shorthand,
+$size in $font_sizes {
+    html {
+        &.#{$shorthand} {
+            font-size: $size;
+            @include media-breakpoint-down(sm) {
+                font-size: $size - 1px;
+            }
+        }
+    }
+}
+
+.text-xs {
+    font-size: 0.85em;
+}
+
+.hr-dark {
+    border-top: 1px solid $gray-700;
+}
+
+.btn:not(:disabled):not(.disabled):active,
+.btn:focus,
+.btn:hover,
+.close:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
